@@ -1,0 +1,11 @@
+{
+    "name": "chance",
+    "version": "0.1.0",
+    "description": "机会模块前端api接口",
+    "title": "CHANCE",
+    "url" : "http://plus-node-dev.brandwisdom.cn/api/v1/",
+    "template": {
+        "withCompare": true,
+        "withGenerator": true
+    }
+}

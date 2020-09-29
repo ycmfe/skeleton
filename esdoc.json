@@ -1,0 +1,4 @@
+{
+  "source": "./public/static",
+  "destination": "../esdoc"
+}

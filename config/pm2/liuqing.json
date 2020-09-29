@@ -1,0 +1,23 @@
+{
+  "apps": [
+    {
+      "name": "skeleton",
+      "cwd": "/Users/yangcong/Documents/work/code/npm/skeleton",
+      "script": "server/app.js",
+      "exec_mode": "cluster",
+      "node_args": "--harmony",
+      "watch": [
+        "server", "config/env"
+      ],
+      "env": {
+        "NODE_ENV": "liuqing"
+      },
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "error_file": null,
+      "out_file": null,
+      "pid_file": null,
+      "max_memory_restart": "800M",
+      "instances": "1"
+    }
+  ]
+}

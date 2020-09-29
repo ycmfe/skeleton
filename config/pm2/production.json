@@ -1,0 +1,20 @@
+{
+  "apps": [
+    {
+      "name": "skeleton",
+      "cwd": "/home/master/projects/skeleton",
+      "script": "server/app.js",
+      "exec_mode": "cluster",
+      "node_args": "--harmony",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "error_file": null,
+      "out_file": null,
+      "pid_file": null,
+      "max_memory_restart": "800M",
+      "instances": "max"
+    }
+  ]
+}
