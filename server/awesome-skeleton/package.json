@@ -1,0 +1,101 @@
+{
+  "_from": "awesome-skeleton",
+  "_id": "awesome-skeleton@0.1.5",
+  "_inBundle": false,
+  "_integrity": "sha1-XNK0oqI+qWrKBY2b9iSYNndG9cE=",
+  "_location": "/awesome-skeleton",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "awesome-skeleton",
+    "name": "awesome-skeleton",
+    "escapedName": "awesome-skeleton",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/awesome-skeleton/download/awesome-skeleton-0.1.5.tgz",
+  "_shasum": "5cd2b4a2a23ea96aca058d9bf62498367746f5c1",
+  "_spec": "awesome-skeleton",
+  "_where": "/Users/yangcong/Documents/work/code/npm/skeleton",
+  "author": "",
+  "bin": {
+    "skeleton": "bin/skeleton.js"
+  },
+  "bugs": {
+    "url": "https://github.com/kaola-fed/awesome-skeleton/issues"
+  },
+  "bundleDependencies": false,
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "dependencies": {
+    "base64-img": "^1.0.4",
+    "commander": "^3.0.1",
+    "html-minifier": "^4.0.0",
+    "images": "^3.0.2",
+    "puppeteer": "^1.2.0",
+    "update-notifier": "^3.0.1",
+    "xutil": "^1.0.11"
+  },
+  "deprecated": false,
+  "description": "骨架图生成器",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^8.2.0",
+    "commitlint": "^8.2.0",
+    "conventional-changelog-cli": "^2.0.23",
+    "eslint": "^6.3.0",
+    "eslint-config-egg": "^7.5.1",
+    "git-contributor": "^1.0.10",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "rollup": "^1.20.3"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "homepage": "https://github.com/kaola-fed/awesome-skeleton#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ]
+  },
+  "main": "src/index.js",
+  "name": "awesome-skeleton",
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kaola-fed/awesome-skeleton.git"
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.js",
+    "ci": "npm run lint && npm run test",
+    "contributor": "git-contributor",
+    "dev": "rollup --config rollup.config.js --watch",
+    "lint": "npm run build && eslint . --fix",
+    "prepublishOnly": "np --yolo --no-publish",
+    "test": "nyc mocha",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add ."
+  },
+  "version": "0.1.5"
+}

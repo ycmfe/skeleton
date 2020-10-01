@@ -6,6 +6,8 @@
     <script src="https://lib.baomitu.com/jquery/3.5.0/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://fp.yangcong345.com/middle/0.19.2/axios.min.js" crossorigin="anonymous"></script>
     <script src="https://fp.yangcong345.com/middle/7.10.5/polyfill.min.js"></script>
+    <script src="https://www.jq22.com/demo/jqueryRunCode201709060221/jquery.runCode.js"></script>
+    <link rel="stylesheet" href="https://www.jq22.com/demo/jqueryRunCode201709060221/jquery.runCode.css">
     <!-- CSS (load bootstrap from a CDN) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -17,8 +19,7 @@
 </head>
 <body class="container">
     <div class="page-header">
-        <h1>中学CDN上传</h1>
-        <p>通用资源是指可以多项目统一使用的静态资源列表。上传时如果不能确认是否通用资源，请尽量使用其他。</p>
+        <h1>骨架屏生成</h1>
     </div>
     <main>
         <div class="alert alert-success" role="alert">...</div>
@@ -26,46 +27,30 @@
             <div class="panel-body">
                 <form id="form">
                     <div class="input-group">
-                        <select name="type" style="width: 200px;height: 30px;">
-                            <option value="1" selected>通用</option>
-                            <option value="2">其他</option>
-                        </select>
+                        <input name="name" class="form-control" type="text" placeholder="访问页面的title" />
                     </div>
                     <div class="input-group">
-                        <input name="version" class="form-control" type="text" placeholder="版本号" />
+                        <input name="url" class="form-control" type="text" placeholder="访问路径" />
                     </div>
                     <div class="input-group">
-                        <input name="file" type="file" />
+                        <input name="device" class="form-control" type="text" placeholder="骨架屏生成使用的设备默认iPhone X" />
+                    </div>
+                    <div class="input-group">
+                        <input name="grayblockwidth" class="form-control" type="text" placeholder="最小处理灰色块的宽度" />
+                    </div>
+                    <div class="input-group">
+                        <input name="graypseudowidth" class="form-control" type="text" placeholder="最小处理伪类宽" />
+                    </div>
+                    <div class="input-group">
+                        <textarea name="cookies" class="form-control" type="text" placeholder='cookie信息[{"domain": ".baidu.com","expirationDate": 1568267131.555328}]'></textarea>
                     </div>
                     <input class="btn btn-success" type="button" value="上传文件" id="submitBtn" />
                 </form>
             </div>
-            <div class="panel-footer">
-                项目的版本号应该根据某些规则进行迭代, 用户可以了解版本变更的影响范围。例如：1.0.1。 规则如下:
-                <ul>
-                    <li>主版本号：当你做了不兼容的 API 修改</li>
-                    <li>次版本号：当你做了向下兼容的功能性新增</li>
-                    <li>修订号：当你做了向下兼容的问题修正。</li>
-                </ul>
-                <div class="alert alert-warning" role="alert">特殊需求的文件上传请使用<a href="https://www.npmjs.com/package/yc-webpack-cdn/access">WebpackCDN</a></div>
+            <div class="panel-foot" id="foot">
+                <textarea id="code"></textarea>
             </div>
         </div>
-        <div class="panel panel-success">
-            <div class="panel-heading">
-                <ul class="nav nav-pills">
-                    <li role="presentation" class="active"><a href="###">通用</a></li>
-                    <li role="presentation"><a href="###">其他</a></li>
-                </ul>
-            </div>
-            
-            <div class="panel-body">
-                <ul class="list-group">
-                    
-                </ul>
-            </div>
-        </div>
-    </main>
-
     <script src="/index.js"></script>
 </body>
 </html>

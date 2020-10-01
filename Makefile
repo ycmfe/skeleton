@@ -1,7 +1,6 @@
 reg=--registry=https://registry.npm.taobao.org
 
 install:
-	npm install decimal.js $(reg)
 	npm install $(reg)
 
 # 开发环境编译
